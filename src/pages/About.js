@@ -1,4 +1,12 @@
+import React from "react";
+import UsersList from "../components/UsersList"; // ✅ fixed import
+
 function About() {
-  return <h1 className="text-3xl font-bold text-green-600">About Us</h1>;
+  return (
+    <>
+      <UsersList  name="Chandan Singh" />
+    </>
+  );
 }
+
 export default About;

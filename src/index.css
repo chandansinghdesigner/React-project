@@ -6,3 +6,34 @@
 .w-full-important {
   width: 100% !important;
 }
+
+/* Style the card and enable container queries */
+.card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  max-width: 300px; /* so we can see the effect */
+  container-type: inline-size; /* enable container query on width */
+  container-name: product-card; /* optional: name it for targeting */
+  background: #000;
+}
+
+/* Attribute boxes basic style */
+.attributes {
+  display: grid;
+  grid-template-columns: max-content;
+  gap: 8px;
+}
+
+.attribute {
+  background: #f5f5f5;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* When the card's own width is >= 480px, add a 2nd column */
+@container product-card (min-width: 480px) {
+  .attributes {
+    grid-template-columns: max-content max-content;
+  }
+}
